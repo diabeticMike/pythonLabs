@@ -1,103 +1,42 @@
+import math
+
 # 1
-print('\n', 1)
-firstName = 'Mykhailo'
-lastName = 'Tkachuk'
-group = 'PM-41'
-print(firstName, ' ', lastName, ' ', group)
+print('Введіть a,b,c')
+a = float(input())
+b = float(input())
+c = float(input())
+p = (a+b+c)/2
+print(math.sqrt(p*(p-a)*(p-b)*(p-c)))
 
-# 2
-print('\n', 2)
-print('Enter your firstname')
-firstName = input()
-print('Enter your lastname')
-lastName = input()
-print('Enter your group')
-group = input()
-print(firstName, ' ', lastName, ' ', group)
+# 2.1
+print('Введіть x,y')
+x = float(input())
+y = float(input())
+if math.fabs(x*y) < 1 and x < 0:
+    print((x+y)/math.exp(x*y))
+elif 2 < x and y <= 0:
+    print(-pow(math.log(math.Exp(),x), 2))
+elif 0 < y and 0 <= x and x <= 2:
+    print(math.log10(math.sqrt(y)))
 
-# 3
-print('\n', 3)
-print('Enter size (width*height)')
-w = int(input())
-h = int(input())
-print('Carpet has area:', w*h)
-
-# 4
-print('\n', 4)
-print('Enter size (width*height)')
-w = int(input())
-h = int(input())
-print('Enter carpenter price')
-p = int(input())
-print('Carpet has area(in cm^2):', w*h)
-print('Carpet has area(in m^2):', w*h/10000)
-print('Carpet has price:', w*h/10000*p)
-
-# 5
-print('\n', 5)
-res = 1
-for i in range(2,20):
-    res*=i
-print(res)
-
-# 6
-print('\n', 6)
-for i in range(100):
-    print('A', end='')
-
-# 7
-print('\n', 7)
-for i in range(100):
-    print('Python', end='')
-
-# 8
-print('\n', 8)
-v = ''
-for i in range(50):
-    v += str(179)
-print(int(v)**2)
-
-# 9
-print('\n', 9)
-print('Enter your name')
-name = input()
-print('Hello, ', name,'!', sep='')
-
-# 10
-print('\n', 10)
-print(103,25,14, sep='\n')
-
-# 11
-print('\n', 11)
-print('%.2f'% 156.12459835)
-
-# 12
-print('\n', 12)
-print('%10.3f'%(7.240),'%9.3f'%-43.520)
-print('%10.3f'%(23.500),'%8.2f'%55.10)
-print(7)
-print('%10.3f'%(88.203),'%9.3f'%-769.800)
-
-# 13
-print('\n', 13)
-print('{:3d}\n'.format(103), '{:2d}\n'.format(24), '{:2d}'.format(14))
-print('{:.2f}'.format(156.12459835))
-print('{:10.3f}'.format(7.240),'{:9.3f}'.format(-43.520))
-print('{:10.3f}'.format(23.500),'{:8.2f}'.format(55.10))
-print('{:}'.format(7))
-print('{:10.3f}'.format(88.203),'{:9.3f}'.format(-769.800))
-
-# 14
-print('\n', 14)
-a = 2
-b = 4
-print(a < b and a > 1)
-print(a > b and b < 5)
-x = 'abc'
-y = 'a'
-print(x > y or y < 'a')
-print(x < y or x < 'ab')
-# Строки мають лексикографічну властивість, тому ми відповідно можемо їх порівняти
+# 2.2.1
+print('Введіть число')
 a = int(input())
-b = int(input())
-print(a > b)
+if a < 5:
+    print('Чисто менше 5')
+else:
+    if a % 5 != 0:
+        print('Для ділення без остачі на 5 вам потрібно додати ', 5 - a % 5)
+if a < 10:
+    print('Чисто менше 10')
+else:
+    if a % 10 != 0:
+        print('Для ділення без остачі на 10 вам потрібно додати ', 10 - a % 10)
+
+# 2.2.2
+def Z(x,y):
+    print((x*y)/(x-y))
+
+x = float(input())
+y = float(input())
+Z(x,y)
