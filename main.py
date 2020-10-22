@@ -13,10 +13,13 @@ print('Введіть x,y')
 x = float(input())
 y = float(input())
 if math.fabs(x*y) < 1 and x < 0:
+    print(1)
     print((x+y)/math.exp(x*y))
 elif 2 < x and y <= 0:
-    print(-pow(math.log(math.Exp(),x), 2))
+    print(2)
+    print(-pow(math.log(math.exp(1),x), 2))
 elif 0 < y and 0 <= x and x <= 2:
+    print(3)
     print(math.log10(math.sqrt(y)))
 
 # 2.2.1
